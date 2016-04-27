@@ -7,9 +7,18 @@ myApp.config(['$urlRouterProvider', '$stateProvider',
 		$urlRouterProvider.otherwise('/');
 
 		$stateProvider
-			state('home', {
+			.state('home', {
 				url: '/',
-				tempate: 'templates/home.html'
+				templateUrl: 'templates/home.html',
+				controller: 'homeCtrl'
+			})
+			.state('about', {
+				url: '/about',
+				templateUrl: 'templates/about.html'
+			})
+			.state('contact', {
+				url: '/contact',
+				templateUrl: 'templates/contact.html'
 			})
 	}
 ])
